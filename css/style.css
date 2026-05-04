@@ -42,6 +42,15 @@ body {
   border-radius: 50%;
 }
 
+.logo-div {
+  display: flex;
+  align-items: center;
+}
+.logo-div img {
+  height: 38px;
+  width: auto;
+}
+
 /* Reset small improvements */
 * {
   box-sizing: border-box;

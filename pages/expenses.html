@@ -207,35 +207,61 @@
         </div>
 
         <!-- RIGHT PANEL -->
+        <!-- RIGHT PANEL -->
         <div class="expenses-right hidden" id="expensePanel">
 
-          <button class="close-btn" onclick="closeExpense()">✖</button>
+          <!-- HEADER -->
+          <div class="panel-header">
+            <h3 id="expTitle"></h3>
+            <button class="close-btn" onclick="closeExpense()">✖</button>
+          </div>
 
-          <h3 id="expTitle"></h3>
+          <!-- DATE -->
+          <div class="panel-sub">
+            <span>Date:</span>
+            <strong id="expDate"></strong>
+          </div>
 
-          <p><strong>Date:</strong> <span id="expDate"></span></p>
+          <!-- CATEGORY + REF -->
+          <div class="panel-card">
+            <h4>Expense Info</h4>
 
-          <hr>
+            <div class="row-line">
+              <span>Category</span>
+              <strong id="expCategory"></strong>
+            </div>
 
-          <h4>Category</h4>
-          <p id="expCategory"></p>
+            <div class="row-line">
+              <span>Reference</span>
+              <strong id="expRef"></strong>
+            </div>
+          </div>
 
-          <h4>Reference</h4>
-          <p id="expRef"></p>
+          <!-- FINANCIAL -->
+          <div class="panel-card highlight">
+            <h4>Financial</h4>
 
-          <hr>
+            <div class="row-line">
+              <span>Amount</span>
+              <strong class="danger" id="expAmount"></strong>
+            </div>
 
-          <h4>Amount</h4>
-          <p id="expAmount"></p>
+            <div class="row-line">
+              <span>Payment</span>
+              <strong id="expPayment"></strong>
+            </div>
+          </div>
 
-          <h4>Payment</h4>
-          <p id="expPayment"></p>
+          <!-- STATUS -->
+          <div class="panel-card">
+            <h4>Status</h4>
+            <span class="badge" id="expStatus"></span>
+          </div>
 
-          <h4>Status</h4>
-          <p id="expStatus"></p>
-
-
-          <button class="edit-btn" onclick="openEditModal()">Edit Data</button>
+          <!-- ACTION -->
+          <div class="panel-actions">
+            <button class="edit-btn" onclick="openEditModal()">Edit Data</button>
+          </div>
 
         </div>
 

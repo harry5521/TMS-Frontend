@@ -93,7 +93,7 @@
                 </thead>
 
                 <tbody>
-                  <tr onclick="selectTrip('TRP-001')">
+                  <tr onclick="selectTrip('TRP-001', this)">
                     <td class="link">TRP-001</td>
                     <td>B-77210<br><small>Global Motors</small></td>
                     <td>Karachi → Lahore</td>
@@ -101,21 +101,7 @@
                     <td><span class="badge in-transit">In Transit</span></td>
                   </tr>
 
-                  <tr onclick="selectTrip('TRP-002')">
-                    <td class="link">TRP-002</td>
-                    <td>B-77211<br><small>Nexus Logistics</small></td>
-                    <td>Islamabad → Multan</td>
-                    <td>XYZ-456</td>
-                    <td><span class="badge pending">Pending</span></td>
-                  </tr>
-                  <tr onclick="selectTrip('TRP-002')">
-                    <td class="link">TRP-002</td>
-                    <td>B-77211<br><small>Nexus Logistics</small></td>
-                    <td>Islamabad → Multan</td>
-                    <td>XYZ-456</td>
-                    <td><span class="badge pending">Pending</span></td>
-                  </tr>
-                  <tr onclick="selectTrip('TRP-002')">
+                  <tr onclick="selectTrip('TRP-002', this)">
                     <td class="link">TRP-002</td>
                     <td>B-77211<br><small>Nexus Logistics</small></td>
                     <td>Islamabad → Multan</td>
@@ -125,45 +111,62 @@
                 </tbody>
 
               </table>
-              <div class="pagination" id="pagination"></div>
             </div>
+            <div class="pagination" id="pagination"></div>
           </div>
 
         </div>
 
         <!-- RIGHT PANEL -->
+        <!-- RIGHT PANEL -->
         <div class="trips-right hidden" id="tripPanel">
 
-          <button class="close-btn" onclick="closePanel()">✖</button>
+          <div class="panel-header">
+            <h3 id="tripTitle"></h3>
+            <button class="close-btn" onclick="closePanel()">✖</button>
+          </div>
 
-          <h3 id="tripTitle"></h3>
+          <!-- STATUS -->
+          <div class="panel-status">
+            <span class="badge" id="status"></span>
+          </div>
 
-          <p><strong>Status:</strong> <span id="status"></span></p>
+          <!-- DRIVER / VEHICLE -->
+          <div class="panel-card">
+            <h4>Driver</h4>
+            <p id="driver"></p>
 
-          <hr>
+            <h4>Vehicle</h4>
+            <p id="vehicle"></p>
+          </div>
 
-          <h4>Driver</h4>
-          <p id="driver"></p>
+          <!-- ROUTE -->
+          <div class="panel-card">
+            <h4>Route</h4>
+            <p id="route"></p>
+          </div>
 
-          <h4>Vehicle</h4>
-          <p id="vehicle"></p>
+          <!-- FINANCIAL -->
+          <div class="panel-card highlight">
+            <h4>Financial Summary</h4>
 
-          <h4>Route</h4>
-          <p id="route"></p>
+            <p>Freight <span id="freight"></span></p>
+            <p>Expenses <span id="expenses"></span></p>
 
-          <hr>
+            <hr>
 
-          <h4>Financial</h4>
-          <p>Freight: <span id="freight"></span></p>
-          <p>Expenses: <span id="expenses"></span></p>
-          <p><strong>Profit: <span id="profit"></span></strong></p>
+            <p class="profit">
+              Profit <strong id="profit"></strong>
+            </p>
+          </div>
 
-
-          <button class="edit-btn" onclick="openEditModal()">Edit Data</button>
-          <button class="secondary-btn" onclick="openExpenseModal()">Manage Expenses</button>
+          <!-- ACTION BUTTONS -->
+          <div class="panel-actions">
+            <button class="edit-btn" onclick="openEditModal()">Edit Data</button>
+            <button class="secondary-btn" onclick="openExpenseModal()">Manage Expenses</button>
+          </div>
 
         </div>
-
       </div>
 
     </div>

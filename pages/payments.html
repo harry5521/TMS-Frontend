@@ -210,30 +210,57 @@
         <!-- RIGHT PANEL -->
         <div class="payments-right hidden" id="paymentPanel">
 
-          <button class="close-btn" onclick="closePayment()">✖</button>
+          <!-- HEADER -->
+          <div class="panel-header">
+            <h3 id="payTitle"></h3>
+            <button class="close-btn" onclick="closePayment()">✖</button>
+          </div>
 
-          <h3 id="payTitle"></h3>
+          <!-- DATE -->
+          <div class="panel-sub">
+            <span>Date:</span>
+            <strong id="payDate"></strong>
+          </div>
 
-          <p><strong>Date:</strong> <span id="payDate"></span></p>
+          <!-- CUSTOMER INFO -->
+          <div class="panel-card">
+            <h4>Customer Info</h4>
 
-          <hr>
+            <div class="row-line">
+              <span>Customer</span>
+              <strong id="payCustomer"></strong>
+            </div>
 
-          <h4>Customer</h4>
-          <p id="payCustomer"></p>
+            <div class="row-line">
+              <span>Builty</span>
+              <strong id="payBuilty"></strong>
+            </div>
+          </div>
 
-          <h4>Builty</h4>
-          <p id="payBuilty"></p>
+          <!-- PAYMENT DETAILS -->
+          <div class="panel-card">
+            <h4>Payment Details</h4>
 
-          <hr>
+            <div class="row-line">
+              <span>Type</span>
+              <strong id="payType"></strong>
+            </div>
 
-          <h4>Type</h4>
-          <p id="payType"></p>
+            <div class="row-line">
+              <span>Method</span>
+              <strong id="payMethod"></strong>
+            </div>
+          </div>
 
-          <h4>Method</h4>
-          <p id="payMethod"></p>
+          <!-- FINANCIAL -->
+          <div class="panel-card highlight">
+            <h4>Amount</h4>
 
-          <h4>Amount</h4>
-          <p id="payAmount"></p>
+            <div class="row-line">
+              <span>Total</span>
+              <strong class="success" id="payAmount"></strong>
+            </div>
+          </div>
 
         </div>
 
@@ -242,9 +269,9 @@
     </div>
 
     <div id="footer"></div>
-  </div> 
+  </div>
 
-  
+
   <!-- PAYMENT RECEIPT PANEL -->
   <div class="receipt-overlay hidden" id="receiptModal">
 

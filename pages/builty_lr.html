@@ -355,33 +355,60 @@
         <!-- RIGHT PANEL -->
         <div class="builty-right hidden" id="builtyPanel">
 
-          <button class="close-btn" onclick="closeBuilty()">✖</button>
+          <!-- HEADER -->
+          <div class="panel-header">
+            <h3 id="builtyTitle"></h3>
+            <button class="close-btn" onclick="closeBuilty()">✖</button>
+          </div>
 
-          <h3 id="builtyTitle"></h3>
+          <!-- DATE -->
+          <div class="panel-sub">
+            <span>Date:</span>
+            <strong id="bDate"></strong>
+          </div>
 
-          <p><strong>Date:</strong> <span id="bDate"></span></p>
+          <!-- CUSTOMER -->
+          <div class="panel-card">
+            <h4>Customer</h4>
+            <p id="bCustomer"></p>
+          </div>
 
-          <hr>
+          <!-- ROUTE -->
+          <div class="panel-card">
+            <h4>Route</h4>
+            <p id="bRoute"></p>
+          </div>
 
-          <h4>Customer</h4>
-          <p id="bCustomer"></p>
+          <!-- FINANCIAL -->
+          <div class="panel-card highlight">
+            <h4>Financial Summary</h4>
 
-          <h4>Route</h4>
-          <p id="bRoute"></p>
+            <div class="row-line">
+              <span>Freight</span>
+              <strong id="bFreight"></strong>
+            </div>
 
-          <hr>
+            <div class="row-line">
+              <span>Advance</span>
+              <strong id="bAdvance"></strong>
+            </div>
 
-          <h4>Financial</h4>
-          <p>Freight: <span id="bFreight"></span></p>
-          <p>Advance: <span id="bAdvance"></span></p>
-          <p>Remaining: <span id="bRemaining"></span></p>
+            <div class="row-line">
+              <span>Remaining</span>
+              <strong class="danger" id="bRemaining"></strong>
+            </div>
+          </div>
 
-          <hr>
+          <!-- STATUS -->
+          <div class="panel-card">
+            <h4>Status</h4>
+            <span class="badge" id="bStatus"></span>
+          </div>
 
-          <h4>Status</h4>
-          <p id="bStatus"></p>
-
-          <button class="edit-btn" onclick="openEditModal()">Edit Data</button>
+          <!-- ACTION -->
+          <div class="panel-actions">
+            <button class="edit-btn" onclick="openEditModal()">Edit Data</button>
+          </div>
 
         </div>
 

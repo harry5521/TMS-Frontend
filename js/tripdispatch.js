@@ -19,15 +19,28 @@ const trips = {
 
 let currentTripId = null;
 
-/* OPEN PANEL */
-function selectTrip(id) {
+// Select Trip
+function selectTrip(id, el) {
   const trip = trips[id];
   if(!trip) return;
 
   currentTripId = id;
 
-  document.getElementById("tripPanel").classList.remove("hidden");
+  // ✅ REMOVE OLD ACTIVE ROW
+  document.querySelectorAll("tbody tr").forEach(r => {
+    r.classList.remove("active-row");
+  });
 
+  // ✅ ADD ACTIVE TO CLICKED ROW
+  if (el) {
+    el.classList.add("active-row");
+  }
+
+  // PANEL OPEN
+  document.getElementById("tripPanel").classList.remove("hidden");
+  document.querySelector(".trips-layout").classList.add("active");
+
+  // DATA FILL
   document.getElementById("tripTitle").innerText = id + " Details";
   document.getElementById("status").innerText = trip.status;
   document.getElementById("driver").innerText = trip.driver;
@@ -41,6 +54,12 @@ function selectTrip(id) {
 /* CLOSE PANEL */
 function closePanel() {
   document.getElementById("tripPanel").classList.add("hidden");
+  document.querySelector(".trips-layout").classList.remove("active");
+
+  // ✅ REMOVE ACTIVE ROW
+  document.querySelectorAll("tbody tr").forEach(r => {
+    r.classList.remove("active-row");
+  });
 }
 
 /* OPEN EDIT MODAL */

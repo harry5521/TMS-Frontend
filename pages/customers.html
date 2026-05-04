@@ -230,23 +230,62 @@
         <!-- RIGHT PANEL -->
         <div class="customer-right hidden" id="customerPanel">
 
-          <button class="close-btn" onclick="closeCustomer()">✖</button>
+          <!-- HEADER -->
+          <div class="panel-header">
+            <h3 id="cTitle"></h3>
+            <button class="close-btn" onclick="closeCustomer()">✖</button>
+          </div>
 
-          <h3 id="cTitle"></h3>
+          <!-- BASIC INFO -->
+          <div class="panel-card">
+            <h4>Customer Info</h4>
 
-          <p><strong>Name:</strong> <span id="cName"></span></p>
-          <p><strong>Phone:</strong> <span id="cPhone"></span></p>
+            <div class="row-line">
+              <span>Name</span>
+              <strong id="cName"></strong>
+            </div>
 
-          <hr>
+            <div class="row-line">
+              <span>Phone</span>
+              <strong id="cPhone"></strong>
+            </div>
+          </div>
 
-          <p><strong>Category:</strong> <span id="cCategory"></span></p>
-          <p><strong>Total Builty:</strong> <span id="cBuilty"></span></p>
-          <p><strong>Balance:</strong> <span id="cBalance"></span></p>
+          <!-- BUSINESS INFO -->
+          <div class="panel-card">
+            <h4>Business Details</h4>
 
-          <hr>
+            <div class="row-line">
+              <span>Category</span>
+              <strong id="cCategory"></strong>
+            </div>
 
-          <p><strong>Status:</strong> <span id="cStatus"></span></p>
-          <button class="edit-btn" onclick="openEditModal()">Edit Data</button>
+            <div class="row-line">
+              <span>Total Builty</span>
+              <strong id="cBuilty"></strong>
+            </div>
+          </div>
+
+          <!-- FINANCIAL -->
+          <div class="panel-card highlight">
+            <h4>Financial</h4>
+
+            <div class="row-line">
+              <span>Balance</span>
+              <strong class="danger" id="cBalance"></strong>
+            </div>
+          </div>
+
+          <!-- STATUS -->
+          <div class="panel-card">
+            <h4>Status</h4>
+            <span class="badge" id="cStatus"></span>
+          </div>
+
+          <!-- ACTION -->
+          <div class="panel-actions">
+            <button class="edit-btn" onclick="openEditModal()">Edit Data</button>
+          </div>
 
         </div>
 
